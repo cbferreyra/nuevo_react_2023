@@ -1,12 +1,5 @@
 import "./Card.css";
-export default function Card() {
-  const producto = {
-    imagen: "imagenes/gibson_sg.jpg",
-    titulo: "Gibson SG",
-    descripcion: "Guitarra Gibson SG 1961",
-    precio: 1100000,
-    envio: true,
-  };
+export default function Card({ producto }) {
   return (
     <div className="card">
       <img src={producto.imagen} alt="" />

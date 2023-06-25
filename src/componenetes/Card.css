@@ -15,3 +15,6 @@ card-info {
 .precio {
   font-weight: bold;
 }
+.envio {
+  color: rgb(0, 149, 255);
+}

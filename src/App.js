@@ -1,12 +1,17 @@
 import "./App.css";
 import Title from "./componenetes/Title";
-import Card from "./componenetes/Card";
+import CardWrapper from "./componenetes/CardWrapper";
+
 function App() {
+  const numeros = [45, 76, 23, 677, 3, 78];
   return (
     <div className="App">
-      {/* Comentario en JSX */}
+      {/* 2. Lo usamos */}
       <Title nombre={"Eva!"} />
-      <Card />
+      <CardWrapper />
+      {numeros.map((numero) => (
+        <p>El número es:{}</p>
+      ))}
       Hola mundo
     </div>
   );
