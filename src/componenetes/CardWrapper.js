@@ -9,7 +9,7 @@ export default function CardWrapper() {
 
       <div className="grilla">
         {data.map((elemento) => (
-          <Card producto={elemento} />
+          <Card key={elemento.id} producto={elemento} />
         ))}
       </div>
     </div>
