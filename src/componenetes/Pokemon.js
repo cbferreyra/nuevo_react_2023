@@ -8,7 +8,22 @@ export default function Pokemon() {
   //Los hooks siempre antes del return
   useEffect(() => {
     const endpoint = "https://pokeapi.co/api/v2/pokemon/25";
-    fetch(endpoint).then((res) => {
+    //ASYNC con async habilitamos el uso de promesas
+    const fetchPokemon = async () => {
+      const res = await fetch(endpoint);
+      console.log(res);
+      if (res.ok) {
+        const data = await res.json();
+        setPokemon(data);
+        setLoading(false);
+      } else {
+        console.error("Oops,", res.statusText);
+      }
+    };
+    //Llamar a la fx
+    fetchPokemon();
+
+    /*     fetch(endpoint).then((res) => {
       console.log(res);
       if (res.ok === true) {
         //Todo ok!
@@ -23,7 +38,7 @@ export default function Pokemon() {
       } else {
         console.error("Oops,", res.statusText);
       }
-    });
+    }); */
   }, []);
 
   if (loading === true) {
