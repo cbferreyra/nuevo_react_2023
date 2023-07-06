@@ -4,7 +4,7 @@ import CardWrapper from "./componenetes/CardWrapper";
 import EjemploEventos from "./componenetes/eventos";
 import Contador from "./componenetes/Contador";
 import Pokemon from "./componenetes/Pokemon";
-import Pokemon from "./componenetes/Pokemon";
+
 function App() {
   const numeros = [45, 76, 23, 677, 3, 78];
   return (
